@@ -1,0 +1,45 @@
+body {
+  height: 100vh;
+  background: url("./assets/credit_card_1.svg"), url("./assets/credit_card_2.svg");
+  background-repeat: no-repeat;
+  background-position: left 50px, right bottom;
+  background-size: 25%, 25%;
+  background-color: #fff;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input {
+  outline: #a855f7 !important;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: #a855f7;
+  outline: none;
+  border-radius: 20px;
+}
