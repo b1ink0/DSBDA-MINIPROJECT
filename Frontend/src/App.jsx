@@ -60,11 +60,11 @@ function App() {
     { value: "rid_clf", label: "Ridge Classifier" },
     { value: "nn", label: "Neural Network" },
   ];
-
+console
   const handlePredict = async () => {
     setPredicting(true);
     const result = await axios(
-      `http://localhost:5000/${selectedOption?.value}/test`
+      `${import.meta.env.VITE_BACKEND_URL}/${selectedOption?.value}/test`
     );
     setPrediction([result.data]);
     console.log(result.data);
@@ -74,7 +74,7 @@ function App() {
   const handleCustomPredict = async () => {
     setCustomPredicting(true);
     const result = await axios(
-      `http://localhost:5000/${selectedOption?.value}/custom`,
+      `${import.meta.env.VITE_BACKEND_URL}/${selectedOption?.value}/custom`,
       {
         method: "POST",
         headers: {
